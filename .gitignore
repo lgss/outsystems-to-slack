@@ -1,4 +1,5 @@
-*.env
-node_modules
-.lambda
+.env
+deploy.env
+node_modules/
+.lambda/
 .DS_Store
