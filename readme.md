@@ -20,18 +20,12 @@ You'll also need an AWS account, or access to credentials that let you create a 
 ### Configuration
 
 1. Go to AWS
-2. Create an IAM user
-  * You'll need the Access ID and Secret Key for that user
-3. Create an IAM role 
-  * You'll need the role ARN for that role
-4. Create a dynamodb table with a primary key of `id`
-  * You'll need to keep a note of the name of the table
-5. Create an SNS topic for your notifications to be sent to
-  * You'll need to keep a note of the ARN of the SNS topic
-6. Go into your Slack team and add an 'Incoming WebHook' integration to a Channel of your choice
-  * You'll need the webhook url
-7. Generate a Service Account in Outsystems Lifetime
-  * You'll need the auth key for the Service Account
+2. Create an IAM user (you'll need the Access ID and Secret Key for that user)
+3. Create an IAM role (you'll need the role ARN for that role)
+4. Create a dynamodb table with a primary key of `id` (you'll need to keep a note of the name of the table)
+5. Create an SNS topic for your notifications to be sent to (you'll need to keep a note of the ARN of the SNS topic)
+6. Go into your Slack team and add an 'Incoming WebHook' integration to a Channel of your choice (you'll need the webhook url)
+7. [Create a a Service Account](https://success.outsystems.com/Documentation/10/Reference/OutSystems_APIs/LifeTime_Deployment_API/REST_API_Authentication#Creating_a_service_account) in Outsystems Lifetime (you'll need the auth key for the Service Account)
 
 You'll need a few credentials for the functions to work, all of these are described in each `.env.sample` file.
 
