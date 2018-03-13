@@ -1,0 +1,17 @@
+{
+  "name": "lgss-outsystems-deployments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Blundell",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.121.0",
+    "date-fns": "^1.29.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5"
+  }
+}

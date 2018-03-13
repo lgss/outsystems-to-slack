@@ -4,6 +4,8 @@ This project is a work in progress, sending notifications to a Slack channel whe
 
 There's two parts,  a `deployments` lambda function which checks for new deployments and a `deployments-notify-slack` lambda function which sends a message to Slack.
 
+_Caveat_: Yes there's a whole heap of chaining of promises and alike and the code needs refactoring. Not proud but we'll rework it in time!
+
 ### Example flow
 <img src="./process.svg">
 
