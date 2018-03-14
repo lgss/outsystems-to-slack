@@ -3,3 +3,5 @@ deploy.env
 node_modules/
 .lambda/
 .DS_Store
+
+*.sketch
