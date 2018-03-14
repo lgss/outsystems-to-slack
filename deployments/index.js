@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 AWS.config.update({region: 'eu-west-2'});
 var format = require('date-fns/format');
 var isAfter = require('date-fns/is_after');
-
+var parse = require('date-fns/parse');
 var rp = require('request-promise-native');
 var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 var sns = new AWS.SNS({apiVersion: '2012-08-10'});
