@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 AWS.config.update({region: 'eu-west-2'});
 var format = require('date-fns/format');
 var parse = require('date-fns/parse');
-var distanceInWords = require('date-fns/distance_in_words');   
+var distanceInWordsToNow = require('date-fns/distance_in_words_to_now');   
 var rp = require('request-promise-native');
 
 exports.handler = function(event, context, callback) {
@@ -33,8 +33,8 @@ exports.handler = function(event, context, callback) {
 
       slackProps.createdBy = data.Deployment.CreatedBy;
       slackProps.startedBy = data.Deployment.StartedBy;
-      slackProps.createdOn = distanceInWords(new Date(), parse(data.Deployment.CreatedOn),{addSuffix: true});
-      slackProps.startedOn = distanceInWords(new Date(), parse(data.Deployment.StartedOn),{addSuffix: true});
+      slackProps.createdOn = distanceInWordsToNow(parse(data.Deployment.CreatedOn),{addSuffix: true, includeSeconds:true});
+      slackProps.startedOn = distanceInWordsToNow(parse(data.Deployment.StartedOn),{addSuffix: true, includeSeconds:true});
       slackProps.notes = data.Deployment.Notes;
 
       // get the source and target environment details
